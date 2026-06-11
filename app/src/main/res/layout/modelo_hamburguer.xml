@@ -60,12 +60,14 @@
                     android:textSize="18sp"
                     android:textStyle="bold"/>
 
-                <ImageView
-                    android:layout_marginStart="80dp"
-                   android:layout_gravity="center"
+                <Button
+                    android:backgroundTint="#2c2c2c"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/baseline_shopping_basket"/>
+                    android:text="Pedir"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="30dp"/>
+
 
             </LinearLayout>
 
