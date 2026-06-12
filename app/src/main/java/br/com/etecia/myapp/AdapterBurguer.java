@@ -29,11 +29,15 @@ public class AdapterBurguer extends RecyclerView.Adapter<AdapterBurguer.ViewHold
         View view;
         LayoutInflater layoutInflater = LayoutInflater.from(context);
         view = layoutInflater.inflate(R.layout.modelo_hamburguer,parent,false);
-        return null;
+        return new ViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull AdapterBurguer.ViewHolder holder, int position) {
+
+        holder.modeloTituloBurguer.setText(lstBurguer.get(position).getTitulo());
+        holder.modeloImgBurguer.setImageResource(lstBurguer.get(position).setImgBurguer());
+
 
     }
 
@@ -43,20 +47,16 @@ public class AdapterBurguer extends RecyclerView.Adapter<AdapterBurguer.ViewHold
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder{
-
-        CardView modeloCardBurguer;
         ImageView modeloImgBurguer;
         TextView modeloTituloBurguer;
         TextView modeloDescricaoBurguer;
         TextView modeloPrecoBurguer;
 
-        public ViewHolder(@NonNull View itemView, CardView modeloCardBurguer, ImageView modeloImgBurguer, TextView modeloTituloBurguer, TextView modeloDescricaoBurguer, TextView modeloPrecoBurguer) {
+        public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            this.modeloCardBurguer = modeloCardBurguer;
-            this.modeloImgBurguer = modeloImgBurguer;
-            this.modeloTituloBurguer = modeloTituloBurguer;
-            this.modeloDescricaoBurguer = modeloDescricaoBurguer;
-            this.modeloPrecoBurguer = modeloPrecoBurguer;
+
+            modeloImgBurguer = itemView.findViewById(R.id.modeloImgBurguer);
+            modeloTituloBurguer = itemView.findViewById(R.id.modeloTituloBurguer);
         }
     }
 
