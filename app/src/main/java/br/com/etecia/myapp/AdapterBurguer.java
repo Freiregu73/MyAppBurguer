@@ -1,6 +1,7 @@
 package br.com.etecia.myapp;
 
 import android.content.Context;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -25,6 +26,9 @@ public class AdapterBurguer extends RecyclerView.Adapter<AdapterBurguer.ViewHold
     @NonNull
     @Override
     public AdapterBurguer.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View view;
+        LayoutInflater layoutInflater = LayoutInflater.from(context);
+        view = layoutInflater.inflate(R.layout.modelo_hamburguer,parent,false);
         return null;
     }
 
@@ -35,7 +39,7 @@ public class AdapterBurguer extends RecyclerView.Adapter<AdapterBurguer.ViewHold
 
     @Override
     public int getItemCount() {
-        return 0;
+        return lstBurguer.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder{
