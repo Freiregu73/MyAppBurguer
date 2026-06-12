@@ -7,8 +7,16 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
+    List<Burguers> lstBurguer;
+    RecyclerView idRecHamburguers;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,5 +28,19 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+        idRecHamburguers = findViewById(R.id.idRecHamburguers);
+
+        lstBurguer =  new ArrayList<>();
+
+        lstBurguer.add(new Burguers("Brutão Na Chapa","Hambúrguer parrudo de 180g, cheddar derretido, bacon crocante," +
+                " cebola na manteiga e molho defumado da casa. No pão brioche pra selar o crime","R$34,90",R.drawable.brutao));
+
+        AdapterBurguer adapterBurguer = new AdapterBurguer(getApplicationContext(),lstBurguer);
+
+        idRecHamburguers.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
+
+        idRecHamburguers.setAdapter(adapterBurguer);
+
     }
 }
