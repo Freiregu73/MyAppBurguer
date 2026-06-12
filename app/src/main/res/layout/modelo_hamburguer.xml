@@ -4,7 +4,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/modeloCardBurguer"
     app:cardCornerRadius="20dp"
-    android:layout_height="200dp">
+    android:layout_height="200dp"
+    android:layout_margin="5dp">
 
     <LinearLayout
         android:orientation="horizontal"
@@ -30,7 +31,8 @@
                 android:layout_marginTop="10dp"
                 android:text="@string/titulo"
                 android:textStyle="bold"
-                android:textSize="28sp"
+                android:textSize="20sp"
+                android:textColor="@color/black"
                 android:layout_gravity="center_horizontal"/>
 
             <TextView
@@ -39,6 +41,7 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_width="200dp"
                 android:textSize="14sp"
+                android:textColor="@color/black"
                 android:layout_height="wrap_content"
                 android:text="@string/descricao_burguer"/>
 
@@ -55,6 +58,7 @@
                     android:layout_height="wrap_content"
                     android:text="R$14.5"
                     android:layout_gravity="center"
+                    android:textColor="@color/black"
                     android:textSize="18sp"
                     android:textStyle="bold"/>
 
@@ -63,6 +67,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Pedir"
+                    android:textColor="@color/white"
                     android:layout_gravity="center"
                     android:layout_marginStart="50dp"/>
 
