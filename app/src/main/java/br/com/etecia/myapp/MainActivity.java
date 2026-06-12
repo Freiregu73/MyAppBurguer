@@ -35,6 +35,8 @@ public class MainActivity extends AppCompatActivity {
 
         lstBurguer.add(new Burguers("Brutão Na Chapa","Hambúrguer parrudo de 180g, cheddar derretido, bacon crocante," +
                 " cebola na manteiga e molho defumado da casa. No pão brioche pra selar o crime","R$34,90",R.drawable.brutao));
+        lstBurguer.add(new Burguers("Descarrego de Cheddar","Duplo smash burger com cheddar até escorrer, cebola caramelizada" +
+                " e molho barbecue no pão australiano.","R$33,90",R.drawable.descarrego));
 
         AdapterBurguer adapterBurguer = new AdapterBurguer(getApplicationContext(),lstBurguer);
 

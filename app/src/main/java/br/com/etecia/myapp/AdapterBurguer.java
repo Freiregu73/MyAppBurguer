@@ -37,6 +37,8 @@ public class AdapterBurguer extends RecyclerView.Adapter<AdapterBurguer.ViewHold
 
         holder.modeloTituloBurguer.setText(lstBurguer.get(position).getTitulo());
         holder.modeloImgBurguer.setImageResource(lstBurguer.get(position).getImgBurguer());
+        holder.modeloDescricaoBurguer.setText(lstBurguer.get(position).getDescricao());
+        holder.modeloPrecoBurguer.setText(lstBurguer.get(position).getPreco());
 
 
     }
@@ -57,6 +59,8 @@ public class AdapterBurguer extends RecyclerView.Adapter<AdapterBurguer.ViewHold
 
             modeloImgBurguer = itemView.findViewById(R.id.modeloImgBurguer);
             modeloTituloBurguer = itemView.findViewById(R.id.modeloTituloBurguer);
+            modeloDescricaoBurguer = itemView.findViewById(R.id.modeloDescricaoBurguer);
+            modeloPrecoBurguer = itemView.findViewById(R.id.modeloPrecoBurguer);
         }
     }
 
