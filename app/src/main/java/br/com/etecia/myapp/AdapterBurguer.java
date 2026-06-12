@@ -36,7 +36,7 @@ public class AdapterBurguer extends RecyclerView.Adapter<AdapterBurguer.ViewHold
     public void onBindViewHolder(@NonNull AdapterBurguer.ViewHolder holder, int position) {
 
         holder.modeloTituloBurguer.setText(lstBurguer.get(position).getTitulo());
-        holder.modeloImgBurguer.setImageResource(lstBurguer.get(position).setImgBurguer());
+        holder.modeloImgBurguer.setImageResource(lstBurguer.get(position).getImgBurguer());
 
 
     }
